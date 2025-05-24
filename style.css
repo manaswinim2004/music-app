@@ -1,0 +1,219 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  background: #000;
+}
+.now-playing{
+  text-align: center;
+font-family: 'Baloo 2', cursive;
+
+}
+#song-title {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#song-artist {
+  font-size: 16px;
+  color: #333;
+  margin-top: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+.player {
+  position: relative;
+  width: 400px;
+  height: auto;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.player-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.player-content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: black;
+  background: rgba(255, 255, 255, 0.1); 
+  border-radius: 30px;
+}
+
+#cover-img {
+   width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  display: block;         
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.now-playing {
+  color: #000;
+  font-family: "Aref Ruqaa Ink", sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.controls{
+  text-align: center;
+}
+#prev {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#prev svg {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+#next {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#next svg {
+  width: 32px;
+  height: 32px;
+  transform: scale(1.5);
+  transition: transform 0.2s ease;
+}
+#play-pause {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#play-pause svg {
+  width: 32px;
+  height: 32px;
+  transform: scale(1.5);
+  transition: transform 0.2s ease;
+}
+#shuffle {
+  background: none;
+  border: none;
+ padding: 0.25rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#shuffle svg {
+  width: 32px;
+  height: 32px;
+  transform: scale(1.5);
+  transition: transform 0.2s ease;
+}
+#repeat {
+  background: none;
+  border: none;
+ padding: 0.25rem;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+#repeat svg {
+  width: 32px;
+  height: 32px;
+  transform: scale(1.5);
+  transition: transform 0.2s ease;
+}
+#progress-bar {
+  width: 350px;             
+  height: 8px;              
+  cursor: pointer;
+  -webkit-appearance: none;
+  background: #ddd;        
+  border-radius: 9px;
+  outline: none;
+}
+
+
+#progress-bar::-webkit-slider-runnable-track {
+  height: 8px;
+  background: #ccc;
+  border-radius: 5px;
+}
+
+#progress-bar::-moz-range-track {
+  height: 8px;
+  background: #ccc;
+  border-radius: 5px;
+}
+
+
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 20px;
+  background: url('vector.svg') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  margin-top: -9px;
+  border: none;
+}
+
+#progress-bar::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: url('vector.svg') no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+  border: none;
+}
+.progress-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-bar-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; /* optional max width */
+  gap: 10px;
+}
+
+#progress-bar {
+  flex-grow: 1;
+}
+.cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* spacing above and below the image */
+}
+
+#cover-img {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+#cover-img:hover {
+  transform: scale(1.03);
+}
