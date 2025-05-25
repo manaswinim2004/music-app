@@ -42,20 +42,19 @@ const songs = [
     artist: "Arijit Singh",
     src: "SONGS/Khamoshiyan .mp3",
     cover: "COVERS/4.jpg",
-    duration: "5:35"
+    duration: "3:17"
   },
    {
     title: "Jhol",
     artist: "Mannu,Anural Khalid",
     src: "SONGS/jhol.mp3",
     cover: "COVERS/5.jpg",
-    duration: "2:58"
+    duration: "4:37"
   }
 ];
 
 let currentIndex = 0;
 
-// Load song data into UI and audio
 function loadSong(index) {
   const song = songs[index];
   audio.src = song.src;
@@ -67,21 +66,21 @@ function loadSong(index) {
   currentTimeEl.textContent = "0:00";
 }
 
-// Play audio
+
 function playSong() {
   audio.play();
   isPlaying = true;
   playPauseBtn.classList.add('playing');
 }
 
-// Pause audio
+
 function pauseSong() {
   audio.pause();
   isPlaying = false;
   playPauseBtn.classList.remove('playing');
 }
 
-// Toggle play/pause
+
 playPauseBtn.addEventListener('click', () => {
   if (isPlaying) {
     pauseSong();
@@ -90,7 +89,7 @@ playPauseBtn.addEventListener('click', () => {
   }
 });
 
-// Next song
+
 nextBtn.addEventListener('click', () => {
   if (isShuffle) {
     shuffleSong();
@@ -101,7 +100,6 @@ nextBtn.addEventListener('click', () => {
   playSong();
 });
 
-// Previous song
 prevBtn.addEventListener('click', () => {
   if (isShuffle) {
     shuffleSong();
@@ -112,20 +110,19 @@ prevBtn.addEventListener('click', () => {
   playSong();
 });
 
-// Shuffle toggle
+
 shuffleBtn.addEventListener('click', () => {
   isShuffle = !isShuffle;
   shuffleBtn.classList.toggle('active', isShuffle);
 });
 
-// Repeat toggle
+
 repeatBtn.addEventListener('click', () => {
   isRepeat = !isRepeat;
   repeatBtn.classList.toggle('active', isRepeat);
   audio.loop = isRepeat;
 });
 
-// Shuffle function
 function shuffleSong() {
   let randomIndex = Math.floor(Math.random() * songs.length);
   while (randomIndex === currentIndex && songs.length > 1) {
@@ -134,13 +131,13 @@ function shuffleSong() {
   currentIndex = randomIndex;
 }
 
-// Update progress bar & time
+
 audio.addEventListener('timeupdate', () => {
   if (audio.duration) {
     const progressPercent = (audio.currentTime / audio.duration) * 100;
     progressBar.value = progressPercent;
 
-    // Format current time mm:ss
+ 
     let minutes = Math.floor(audio.currentTime / 60);
     let seconds = Math.floor(audio.currentTime % 60);
     if (seconds < 10) seconds = "0" + seconds;
@@ -148,7 +145,7 @@ audio.addEventListener('timeupdate', () => {
   }
 });
 
-// Seek when user moves progress bar
+
 progressBar.addEventListener('input', () => {
   if (audio.duration) {
     const seekTime = (progressBar.value / 100) * audio.duration;
@@ -156,7 +153,7 @@ progressBar.addEventListener('input', () => {
   }
 });
 
-// When song ends
+
 audio.addEventListener('ended', () => {
   if (!isRepeat) {
     if (isShuffle) {
@@ -169,5 +166,5 @@ audio.addEventListener('ended', () => {
   }
 });
 
-// Initial load
+
 loadSong(currentIndex);
