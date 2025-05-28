@@ -146,6 +146,7 @@ font-family: 'Baloo 2', cursive;
   background: #ddd;        
   border-radius: 9px;
   outline: none;
+  
 }
 
 
@@ -169,7 +170,7 @@ font-family: 'Baloo 2', cursive;
   background: url('vector.svg') no-repeat center;
   background-size: contain;
   cursor: pointer;
-  margin-top: -9px;
+  margin-top: -5px;
   border: none;
 }
 
@@ -185,6 +186,7 @@ font-family: 'Baloo 2', cursive;
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .progress-bar-row {
@@ -202,7 +204,7 @@ font-family: 'Baloo 2', cursive;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0; /* spacing above and below the image */
+  margin: 20px 0; 
 }
 
 #cover-img {
@@ -217,3 +219,4 @@ font-family: 'Baloo 2', cursive;
 #cover-img:hover {
   transform: scale(1.03);
 }
+
