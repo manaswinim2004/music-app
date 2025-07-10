@@ -13,9 +13,9 @@ Stylized progress bar with a custom slider thumb (SVG or image-based)
 Animated transitions and smooth UI interactions
 
 💻 Technologies Used:
-HTML5 – Structure and semantic layout
+HTML – Structure and semantic layout
 
-CSS3 – Modern styling with custom themes, media styling, and visual effects
+CSS – Modern styling with custom themes, media styling, and visual effects
 
 JavaScript – Logic for audio playback, event handling, and dynamic UI updates
 
